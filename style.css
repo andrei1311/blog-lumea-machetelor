@@ -1,0 +1,235 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --c1:#1C110A;
+  --c2:#E4D6A7;
+  --c3:#A27035;
+}
+
+header {
+  background-color: var(--c2);
+  border-radius: 25px;
+  position: fixed;
+  top: 0;
+  width: 1500px;
+  margin-left: -1px;
+  margin-top: 10px;
+  height: auto;
+}
+
+body {
+  background-image: url(https://images.unsplash.com/photo-1610881794089-d88245c2c3c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80);
+  background-repeat: repeat;
+  font-family: 'Lobster', cursive;
+  color: var(--c1);
+}
+
+nav {
+  padding-top: 60px;
+  color: var(--c2);
+}
+
+a {
+  text-decoration: none;
+  color: var(--c1);
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  background-color: var(--c2);
+  border-radius: 10px;
+  padding: 0 15px 0 15px;
+  color: var(--c1);
+}
+
+nav ul {
+  word-spacing: 15px;
+  text-align: center;
+  font-size: 24px;
+}
+
+nav li:hover {
+    cursor: default;
+  background-color: var(--c3);
+}
+
+h1 {
+  display: inline;
+  color: var(--c3);
+  margin-left: 20px;
+}
+
+.logo {
+  transition: transform 3s;
+  width: 50px;
+  height: 50px;
+  display: inline;
+  margin-top: 10px;
+}
+
+img:hover {
+  transform: rotate(1080deg);
+}
+
+.search {
+  position: relative;
+  text-align: left;
+  float: right;
+  margin-right: 20px;
+  border: 2px solid var(--c1);
+  border-radius: 10px;
+  height: 30px;
+  width: 300px;
+  margin-top: 18px;
+}
+
+.ceas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  border: 2px solid black;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
+}
+
+.clock .number1 { --rotation: 30deg; }
+.clock .number2 { --rotation: 60deg; }
+.clock .number3 { --rotation: 90deg; }
+.clock .number4 { --rotation: 120deg; }
+.clock .number5 { --rotation: 150deg; }
+.clock .number6 { --rotation: 180deg; }
+.clock .number7 { --rotation: 210deg; }
+.clock .number8 { --rotation: 240deg; }
+.clock .number9 { --rotation: 270deg; }
+.clock .number10 { --rotation: 300deg; }
+.clock .number11 { --rotation: 330deg; }
+
+.clock .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+  content: '';
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .hand.second {
+  width: 3px;
+  height: 45%;
+  background-color: red;
+}
+
+.clock .hand.minute {
+  width: 7px;
+  height: 40%;
+  background-color: black;
+}
+
+.clock .hand.hour {
+  width: 10px;
+  height: 35%;
+  background-color: black;
+}
+
+main {
+  text-align: center;
+}
+
+button {
+  background-color: var(--c1);
+  color: var(--c2);
+  border-radius: 50%;
+  width: 150px;
+  height: 50px;
+
+}
+
+input {
+  background-color: var(--c2);
+  color: var(--c1);
+  border: 3px solid var(--c1);
+  border-radius: 5px;
+  word-spacing: 5px;
+  justify-content:space-around;
+  text-align: center;
+}
+
+form {
+  padding-top: 25px;
+  font-size: 25px;
+
+}
+
+.social-icons {
+  color: var(--c1);
+  text-align: center;
+}
+
+.social-icons li {
+  display:inline-block;
+  list-style-type:none;
+  user-select:none;
+  margin-bottom: 0;
+  }
+
+  .detalii:hover {
+    background: var(--c1);
+    color: var(--c2);
+  }
+
+  .detalii {
+    border: 3px solid var(--c1);
+    background-color: var(--c2);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-right: 25px;
+    margin-bottom: 100px;
+  }
+
+.social-icons li img {
+  width:35px;
+  height:35px;
+  margin-right: 20px;
+  background-color: white;
+  border-radius: 30%;
+  justify-content: center;
+  }
